@@ -3,7 +3,8 @@
 <div class="sidebar-container">
     <div class="sidemenu-container navbar-collapse collapse fixed-menu">
         <div id="remove-scroll" class="left-sidemenu">
-            <ul class="sidemenu  page-header-fixed slimscroll-style" data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200" style="padding-top: 20px">
+            <ul class="sidemenu  page-header-fixed slimscroll-style" data-keep-expanded="false" data-auto-scroll="true"
+                data-slide-speed="200" style="padding-top: 20px">
                 <li class="sidebar-toggler-wrapper hide">
                     <div class="sidebar-toggler">
                         <span></span>
@@ -14,9 +15,11 @@
                     <div class="user-panel">
                         <div class="pull-left image">
                             @if($current_user->image == "NULL")
-                            <img src="{{ asset('public/uploads/profile/'.$current_user->image) }}" class="img-circle user-img-circle" alt="{{ $current_user->name }}" />
+                            <img src="{{ asset('/uploads/profile/'.$current_user->image) }}"
+                                class="img-circle user-img-circle" alt="{{ $current_user->name }}" />
                             @else
-                            <img src="{{ asset('public/uploads/profile/profile.png') }}" class="img-circle user-img-circle" alt="{{ $current_user->name }}" />
+                            <img src="{{ asset('/uploads/profile/profile.png') }}" class="img-circle user-img-circle"
+                                alt="{{ $current_user->name }}" />
                             @endif
                         </div>
                         <div class="pull-left info">
@@ -75,7 +78,7 @@
                                         echo 'active open';
                                     } ?>">
                     <a href="" class="nav-link nav-toggle"> <i class="material-icons">group
-</i>
+                        </i>
                         <span class="title">Enquiry</span>
                         <span class="arrow"></span>
 
@@ -146,7 +149,7 @@
                     </ul>
                 </li>
 
-               
+
 
 
                 <li class="nav-item <?php if (preg_match("/attendance/i", $url)) {
@@ -198,8 +201,8 @@
                         <li class="nav-item <?php if (preg_match("/expence/i", $url)) {
                                                 echo 'active open';
                                             } ?>">
-                            <a href="" class="nav-link nav-toggle"> 
-                            <i class="material-icons">monetization_on</i>
+                            <a href="" class="nav-link nav-toggle">
+                                <i class="material-icons">monetization_on</i>
                                 <span class="title">Manage Expense</span>
                                 <span class="arrow"></span>
 
@@ -223,36 +226,36 @@
 
                                 </li>
 
-                                
+
                             </ul>
                         </li>
 
                         <li class="nav-item  <?php if (preg_match("/fee/i", $url)) {
                                             echo 'active';
                                         } ?>">
-                    <a href="{{ route('viewFees') }}" class="nav-link nav-toggle">
-                        <i class="material-icons">monetization_on</i>
-                        <span class="title">Manage Income</span>
-                        <span class="selected"></span>
-                    </a>
-                </li>
+                            <a href="{{ route('viewFees') }}" class="nav-link nav-toggle">
+                                <i class="material-icons">monetization_on</i>
+                                <span class="title">Manage Income</span>
+                                <span class="selected"></span>
+                            </a>
+                        </li>
 
                         <li class="nav-item  <?php if (preg_match("/balance/i", $url)) {
                                                             echo 'active';
                                                         } ?>">
-                                    <a href="{{ route('admin.balances.browse') }}" class="nav-link nav-toggle">
-                                        <i class="fa fa-usd"></i>
-                                        <span class="title">Balance Report</span>
-                                        <span class="selected"></span>
-                                    </a>
-                                </li>
+                            <a href="{{ route('admin.balances.browse') }}" class="nav-link nav-toggle">
+                                <i class="fa fa-usd"></i>
+                                <span class="title">Balance Report</span>
+                                <span class="selected"></span>
+                            </a>
+                        </li>
 
                     </ul>
                 </li>
 
 
 
-               
+
 
 
 
@@ -294,15 +297,15 @@
                             </a>
 
                         </li>
-                        
-                         <li class="nav-item">
+
+                        <li class="nav-item">
                             <a href="{{route('st_smsview')}}" class="nav-link nav-toggle">
                                 <i class="fa fa-user"></i>To Staff
 
                             </a>
 
                         </li>
-                        
+
 
                     </ul>
                 </li>
@@ -342,7 +345,7 @@
                             </a>
 
                         </li>
-                         <li class="nav-item">
+                        <li class="nav-item">
                             <a href="{{route('st_emailview')}}" class="nav-link nav-toggle">
                                 <i class="fa fa-user"></i> To Staff
 
